@@ -19,7 +19,7 @@ def difference(a,b):
 def union(a,b):
     result = a
     for x in b:
-        if x not in a:
+        if x not in result:
             result.append(x)
 
     return result

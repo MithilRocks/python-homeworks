@@ -28,14 +28,12 @@ def my_merge(a, b):
             new_list.append(a[i])
             new_list.append(a[j])
             i, j = i+1, j+1
-        
-    while i < len(a):
-        new_list.append(a[i])
-        i += 1
+
+    if i < len(a):
+        new_list.extend(a[i:])
     
-    while j < len(b):
-        new_list.append(b[j])
-        j += 1
+    if j < len(b):
+        new_list.extend(b[j:])
     
     return new_list
 
