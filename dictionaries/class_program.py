@@ -1,0 +1,1 @@
+# HW: write a method similar to dict.fromkeys() but the values are individually assigned to every key
