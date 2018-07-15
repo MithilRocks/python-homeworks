@@ -1,47 +1,9 @@
-# Configuration file for the audio service
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas semper eu elit vitae iaculis. Quisque interdum efficitur elit. Duis ex odio, interdum at nisl pretium, tristique vulputate sem. Maecenas quis venenatis tortor. Sed consequat, sapien vel hendrerit dictum, lorem nulla sodales leo, fringilla imperdiet turpis justo quis est. Integer a turpis vehicula, mollis ipsum eu, varius ante. Sed eget rhoncus dui. In id est at nunc suscipit auctor. Quisque rutrum enim sed tortor porttitor, eu tempor lorem sollicitudin. Fusce lacinia varius nunc vel fringilla. Morbi eget euismod mi, id posuere purus. Aenean vitae lacinia arcu. Fusce rhoncus dictum facilisis. Phasellus auctor purus sapien, vel convallis diam iaculis quis.
 
-# This section contains options which are not specific to any
-# particular interface
-[General]
+Morbi consectetur fringilla risus fringilla euismod. Nullam dignissim diam sed mauris interdum suscipit. Ut nec mollis eros. Vivamus sagittis libero ac bibendum fringilla. Fusce suscipit semper turpis, quis ultricies justo lacinia a. Aliquam sem mauris, sodales eget neque ut, suscipit finibus tellus. Nunc volutpat eros nisl, quis tincidunt felis vestibulum id. Nullam semper magna sit amet dictum condimentum.
 
-# Switch to master role for incoming connections (defaults to true)
-MASTER = "true" #some comment
+Duis a tellus ipsum. Suspendisse potenti. Quisque sit amet efficitur lorem, quis dignissim turpis. Mauris fermentum luctus metus a hendrerit. Morbi at ullamcorper nisl. Integer vitae pulvinar felis. Fusce enim dui, consequat sodales fermentum non, varius ullamcorper dolor. Sed scelerisque leo eu sapien condimentum sollicitudin. Cras in diam iaculis felis eleifend porttitor eget vitae purus. Vestibulum ut felis diam. Praesent a sagittis lacus. Praesent pulvinar eros lacus, id laoreet ipsum viverra vitae. Nulla in tincidunt tortor, quis pellentesque nisi. Donec iaculis tincidunt nunc, non viverra velit.
 
-# If we want to disable support for specific services
-# Defaults to supporting all implemented services
-#Disable:Gateway,Source,Socket
+Vivamus eget ipsum est. Etiam aliquam vehicula elit ut blandit. Sed efficitur fringilla felis, quis mattis lorem interdum vel. Nulla non dui non tellus sodales consequat. Morbi aliquam leo sed risus pellentesque, at imperdiet mi tristique. Vestibulum ipsum nisi, lacinia ac elit sed, euismod rutrum felis. In condimentum ullamcorper nunc nec vulputate. Fusce id hendrerit dolor. Morbi est mi, bibendum eget dictum nec, vulputate eu tortor. Ut vulputate magna non lacinia tincidunt. Ut faucibus, tellus nec egestas hendrerit, diam nulla ornare velit, vitae posuere lacus nisi eget ex.
 
-# SCO routing. Either PCM or HCI (in which case audio is routed to/from ALSA)
-# Defaults to HCI
-SCORouting : PCM
-    and itendation is handled
-    by configparser
-
-# Automatically connect both A2DP and HFP/HSP profiles for incoming
-# connections. Some headsets that support both profiles will only connect the
-# other one automatically so the default setting of true is usually a good
-# idea.
-AutoConnect:true
-
-# Headset interface specific options (i.e. options which affect how the audio
-# service interacts with remote headset devices)
-[Headset]
-
-# Set to true to support HFP, false means only HSP is supported
-# Defaults to true
-HFP:true
-
-# Maximum number of connected HSP/HFP devices per adapter. Defaults to 1
-MaxConnected:1
-
-# Set to true to enable use of fast connectable mode (faster page scanning)
-# for HFP when incoming call starts. Default settings are restored after
-# call is answered or rejected. Page scan interval is much shorter and page
-# scan type changed to interlaced. Such allows faster connection initiated
-# by a headset.
-FastConnectable:false
-
-# Just an example of potential config options for the other interfaces
-[A2DP]
-SBCSources:1
-MPEG12Sources:0
+Sed at est accumsan, dictum lacus sed, commodo arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra laoreet dui non vehicula. Nulla et luctus quam, sed pretium quam. Maecenas quis scelerisque ante, eget blandit dui. Nunc mi mauris, pharetra et tellus ac, pulvinar luctus augue. Nunc tincidunt odio a erat tincidunt rutrum. Vivamus consequat est nulla, vitae sodales lorem semper vel. Aenean lacinia risus a ante ornare elementum. Sed finibus, dui eu gravida rutrum, urna arcu sollicitudin leo, non congue elit ipsum ut magna. Sed eu eros ultricies, sodales lacus eu, pretium nulla. Ut tincidunt pellentesque eleifend. Pellentesque dapibus sed purus at convallis. Aliquam vitae semper risus. Donec sed massa ante.
