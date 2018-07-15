@@ -25,6 +25,7 @@ def understanding_files():
 
 # WAP to accept a file name from user and display alternate characters
 import io
+import sys
 
 def alternate_file_chars(filename):
 
@@ -55,10 +56,22 @@ def longest_line(filename):
 
             print("Longest line is: ", allines[ind])
 
+def copy_file_contents(file1, file2):
+    if type(file1) == str and file1 != "" and type(file2) == str and file2 != "":
+        df1 = io.FileIO(file1)
+
+        if df1 != None:
+            line = df1.readline()
+            df2 = io.FileIO(file2, "w")
+            
+            while line!=b"":
+                df2.write(line)
+                line = df1.readline()
+
+
 def main():
-    filename = input("Enter file name: ")
-    alternate_file_chars(filename)
-    longest_line(filename)
+    copy_file_contents(sys.argv[1], sys.argv[2])
+    # sys.argv is a list of command line arguments
 
 if __name__ == "__main__":
     main()
