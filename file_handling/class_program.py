@@ -73,7 +73,8 @@ def copy_file_contents(file1, file2, n):
                 while line!=b"" and n !=0:
                     df2.write(line)
                     line = df1.readline()
-                    n -= 1
+                    if line != b"\n":
+                        n -= 1
             df1.flush()
 
         df1.close()
@@ -82,10 +83,19 @@ def copy_file_contents(file1, file2, n):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_mutually_exclusive_group()
+    # for positional arguments
+    parser.add_argument("firstposition", help="Positional arguments")
+    # optional arguments
     parser.add_argument("-d", "--dest-file", help = "Destination File")
     parser.add_argument("-x", "--source-file", help = "Source File")
     parser.add_argument("-n", "--no", default = 0, type=int, help = "Number of lines. Set to 0 by default.")
+    # verbose is optional argument but no need to pass any value
+    # if we use -v or --verbose, it sets it true else false
+    parser.add_argument("-v", "--verbose", action="store_true")
+    parser.add_argument("-q", "--quiet", action="store_true")
     args = parser.parse_args()
+    print(args)
     
     copy_file_contents(args.source_file, args.dest_file, args.no)
 
@@ -95,5 +105,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# HW
-# WAP to accept a file from user and display alternate 10 characters
+# HW: Explore getopt and optparse in Python
